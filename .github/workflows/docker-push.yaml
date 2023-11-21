@@ -38,8 +38,8 @@ jobs:
         podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/ocs-metrics-exporter:${IMAGE_TAG}
 
         make operator-bundle
-        podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/operator-bundle:${IMAGE_TAG}
+        podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/ocs-operator-bundle:${IMAGE_TAG}
 
         make operator-catalog
-        podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/operator-catalog:${IMAGE_TAG}
+        podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/ocs-operator-catalog:${IMAGE_TAG}
 
