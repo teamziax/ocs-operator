@@ -31,4 +31,4 @@ jobs:
         REGISTRY_NAMESPACE: ocs-operator
         IMAGE_TAG: ${{ github.event.inputs.IMAGE_TAG }}
       run: |
-        make bundle
+        make ocs-operator
