@@ -27,7 +27,7 @@ jobs:
 
     - name: Build and push docker images
       env:
-        IMAGE_REGISTRY: ghcr.io/teamziax/ocs-operator
+        IMAGE_REGISTRY: ghcr.io/teamziax
         REGISTRY_NAMESPACE: ocs-operator
         IMAGE_TAG: ${{ github.event.inputs.IMAGE_TAG }}
       run: |
