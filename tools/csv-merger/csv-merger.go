@@ -13,6 +13,7 @@ import (
 	"text/template"
 	"time"
 
+	"github.com/blang/semver/v4"
 	"github.com/ghodss/yaml"
 	"github.com/operator-framework/api/pkg/lib/version"
 	csvv1 "github.com/operator-framework/api/pkg/operators/v1alpha1"
