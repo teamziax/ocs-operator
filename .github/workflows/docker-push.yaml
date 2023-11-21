@@ -32,3 +32,14 @@ jobs:
         IMAGE_TAG: ${{ github.event.inputs.IMAGE_TAG }}
       run: |
         make ocs-operator
+        podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/ocs-operator:${IMAGE_TAG}
+
+        make ocs-metrics-exporter
+        podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/ocs-metrics-exporter:${IMAGE_TAG}
+
+        make operator-bundle
+        podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/operator-bundle:${IMAGE_TAG}
+
+        make operator-catalog
+        podman push ${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/operator-catalog:${IMAGE_TAG}
+
